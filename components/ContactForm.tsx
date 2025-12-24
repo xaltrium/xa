@@ -16,8 +16,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenPrivacy, onOpenTerms })
     e.preventDefault();
     setStatus('submitting');
     
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = {
+      ...Object.fromEntries(formData.entries()),
+      submittedAt: new Date().toISOString(),
+      source: window.location.hostname
+    };
+
+    console.log('Submitting to Make.com:', data);
 
     try {
       const response = await fetch('https://hook.eu1.make.com/1gc7mgpxsl4adht731nr59bv3ceu6jjl', {
@@ -160,9 +167,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenPrivacy, onOpenTerms })
                   name="budget"
                   className="w-full bg-[#050505] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#1fc6be]/50 transition-colors appearance-none"
                 >
-                  <option>£500 - £1,000</option>
-                  <option>£1,000 - £2,000</option>
-                  <option>£2,000+</option>
+                  <option value="£500 - £1,000">£500 - £1,000</option>
+                  <option value="£1,000 - £2,000">£1,000 - £2,000</option>
+                  <option value="£2,000+">£2,000+</option>
                 </select>
               </div>
 
