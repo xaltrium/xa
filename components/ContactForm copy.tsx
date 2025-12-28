@@ -55,7 +55,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onOpenPrivacy, onOpenTerms })
         
         <div className="relative z-10 text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">Secure Your Pilot Spot</h2>
-          <p className="text-brand-muted text-base">Limited availability for Q1. <strong>£0 management fees for approved partners.</strong></p>
+          <p className="text-brand-muted text-base">Limited availability for Q3. <strong>£0 management fees for approved partners.</strong></p>
         </div>
 
         <AnimatePresence mode="wait">

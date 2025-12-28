@@ -41,10 +41,10 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
-        >
-          A Low-Risk Pilot Offer for <br />
+        > 
+          Test Paid Ads for Your Cleaning Business — <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1fc6be] to-[#5eead4] drop-shadow-[0_0_15px_rgba(31,198,190,0.3)]">
-            Exterior Cleaning Companies.
+            Before Committing.
           </span>
         </motion.h1>
 
